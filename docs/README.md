@@ -1,4 +1,3 @@
-
 <p align="center">
   <h1 align="center">AkiraDocs</h1>
 </p>
@@ -34,6 +33,33 @@
 
 ## 🚀 What is AkiraDocs?
 AkiraDocs is a modern documentation platform that combines the power of AI with a Notion-like editing experience. Create, translate, and optimize your documentation automatically while maintaining complete control over the content. Perfect for teams who want to focus on their ideas rather than the complexities of documentation management.
+
+
+## 📚 WebRAG Documentation Search
+
+AkiraDocs implements a fully client-side RAG (Retrieval Augmented Generation) system that enables unlimited AI chat interactions without any API costs or rate limits.
+
+### How it Works
+
+1. **Offline Indexing**: Documentation is processed and embedded during build time using GTE-small model
+2. **Browser-Based Components**:
+   - SQLite database (stored in browser) for vector search
+   - Local embedding model for query processing
+   - Local LLaMA model for response generation
+   - All processing happens directly in the user's browser
+
+### Key Benefits
+
+- ✨ **No API Costs**: Everything runs locally in the browser
+- 🚀 **Unlimited Chats**: No rate limits or usage restrictions
+- 🔒 **Privacy-First**: No data leaves the user's device
+- ⚡ **Low Latency**: Direct local processing after initial model load
+
+### Technical Stack
+
+- Embedding: `sauravpanda/gte-small-onnx`
+- LLM: `Llama-3.2-1B-Instruct`
+- Storage: `sql.js-httpvfs` for SQLite in browser
 
 
 ## ⚡️ Quick Deploy

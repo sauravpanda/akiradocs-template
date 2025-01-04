@@ -2,10 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>https://docs.akiradocs.com/manifest</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/fr/docs/introduction</loc>
     </url>
   
@@ -14,91 +10,15 @@
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/fr/docs/seo-and-performance/sitemap-generation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/seo-and-performance/robot-txt</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/internationalization/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/internationalization/managing-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/internationalization/ai-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/installation/troubleshooting</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/installation/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/installation/configuration</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/guides/analytics</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/getting-started/requirements</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/fr/docs/getting-started/quickstart</loc>
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/fr/docs/getting-started/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/editor/overview</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/editor/getting-started</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/editor/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/editor/blocks</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/editor/ai-features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/contributing/how-to-contribute</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/contributing/code-of-conduct</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/content-management/creating-pages</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/fr/docs/api-reference/usage-guide</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/fr/articles/welcome</loc>
+    </url>
+  
+    <url>
+      <loc>https://docs.akiradocs.com/fr/articles/template</loc>
     </url>
   
     <url>
@@ -122,91 +42,15 @@
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/es/docs/seo-and-performance/sitemap-generation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/seo-and-performance/robot-txt</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/internationalization/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/internationalization/managing-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/internationalization/ai-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/installation/troubleshooting</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/installation/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/installation/configuration</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/guides/analytics</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/getting-started/requirements</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/es/docs/getting-started/quickstart</loc>
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/es/docs/getting-started/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/editor/overview</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/editor/getting-started</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/editor/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/editor/blocks</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/editor/ai-features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/contributing/how-to-contribute</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/contributing/code-of-conduct</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/content-management/creating-pages</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/es/docs/api-reference/usage-guide</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/es/articles/welcome</loc>
+    </url>
+  
+    <url>
+      <loc>https://docs.akiradocs.com/es/articles/template</loc>
     </url>
   
     <url>
@@ -230,59 +74,7 @@
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/en/docs/seo-and-performance/sitemap-generation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/seo-and-performance/robot-txt</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/seo-and-performance/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/internationalization/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/internationalization/managing-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/internationalization/ai-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/internationalization/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/installation/troubleshooting</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/installation/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/installation/configuration</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/installation/_meta</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/en/docs/guides/analytics</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/guides/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/getting-started/requirements</loc>
     </url>
   
     <url>
@@ -290,71 +82,11 @@
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/en/docs/getting-started/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/getting-started/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/editor/overview</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/editor/getting-started</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/editor/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/editor/blocks</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/editor/ai-features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/editor/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/contributing/how-to-contribute</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/contributing/code-of-conduct</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/contributing/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/content-management/creating-pages</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/content-management/_meta</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/api-reference/usage-guide</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/en/docs/api-reference/_meta</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/en/articles/welcome</loc>
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/en/articles/importance_of_documentation</loc>
+      <loc>https://docs.akiradocs.com/en/articles/template</loc>
     </url>
   
     <url>
@@ -378,91 +110,15 @@
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/de/docs/seo-and-performance/sitemap-generation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/seo-and-performance/robot-txt</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/internationalization/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/internationalization/managing-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/internationalization/ai-translation</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/installation/troubleshooting</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/installation/setup</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/installation/configuration</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/guides/analytics</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/getting-started/requirements</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/de/docs/getting-started/quickstart</loc>
     </url>
   
     <url>
-      <loc>https://docs.akiradocs.com/de/docs/getting-started/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/editor/overview</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/editor/getting-started</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/editor/features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/editor/blocks</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/editor/ai-features</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/contributing/how-to-contribute</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/contributing/code-of-conduct</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/content-management/creating-pages</loc>
-    </url>
-  
-    <url>
-      <loc>https://docs.akiradocs.com/de/docs/api-reference/usage-guide</loc>
-    </url>
-  
-    <url>
       <loc>https://docs.akiradocs.com/de/articles/welcome</loc>
+    </url>
+  
+    <url>
+      <loc>https://docs.akiradocs.com/de/articles/template</loc>
     </url>
   
     <url>
