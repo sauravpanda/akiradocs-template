@@ -51,13 +51,9 @@ const MemoizedMarkdown = memo(({ content }: { content: string }) => (
       br: ({ node, ...props }) => (
         <br className="mb-2" {...props} />
       ),
-      code({ node, inline, className, children, ...props }) {
+      code({ node, className, children, ...props }) {
         const match = /language-(\w+)/.exec(className || '')
-        return inline ? (
-          <code className={className} {...props}>
-            {children}
-          </code>
-        ) : (
+        return (
           <div className="relative">
             <code className={`language-${match?.[1] || 'text'}`} {...props}>
               {children}
