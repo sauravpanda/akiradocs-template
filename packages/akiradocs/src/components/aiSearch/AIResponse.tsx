@@ -20,8 +20,46 @@ interface AIResponseProps {
 const MemoizedMarkdown = memo(({ content }: { content: string }) => (
   <ReactMarkdown
     components={{
-      pre({ children }) {
-        return <div className="not-prose">{children}</div>
+      pre({ children, ...props }) {
+        return (
+          <pre className="relative" {...props}>
+            {children}
+          </pre>
+        )
+      },
+      p: ({ children }) => <p className="mb-4">{children}</p>,
+      ol: ({ node, ...props }) => (
+        <ol
+          style={{
+            display: "block",
+            listStyleType: "decimal",
+            paddingInlineStart: "40px",
+          }}
+          {...props}
+        />
+      ),
+      ul: ({ node, ...props }) => (
+        <ul
+          style={{
+            display: "block",
+            listStyleType: "disc",
+            paddingInlineStart: "40px",
+          }}
+          {...props}
+        />
+      ),
+      br: ({ node, ...props }) => (
+        <br className="mb-2" {...props} />
+      ),
+      code({ node, className, children, ...props }) {
+        const match = /language-(\w+)/.exec(className || '')
+        return (
+          <div className="relative">
+            <code className={`language-${match?.[1] || 'text'}`} {...props}>
+              {children}
+            </code>
+          </div>
+        )
       }
     }}
   >
@@ -49,7 +87,7 @@ export function AIResponse({ response, sources, onBack }: AIResponseProps) {
             Back
           </Button>
         </CardHeader>
-        <CardContent className="pt-6">
+        <CardContent className="pt-2">
           <div className="prose dark:prose-invert max-w-none
             prose-headings:font-semibold
             prose-h1:text-xl prose-h1:mt-8 prose-h1:mb-4
