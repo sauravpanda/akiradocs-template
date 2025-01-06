@@ -498,75 +498,103 @@ export default function FileExplorer({ onFileSelect }: FileExplorerProps) {
   };
 
   const deleteItem = async (
-    nodeId: string,
-    nodeName: string,
-    nodeType: "file" | "folder"
-  ) => {
-    const confirmMessage = `Are you sure you want to delete this ${nodeType}${
-      nodeType === "folder" ? " and all its contents" : ""
-    }?`;
-    if (!confirm(confirmMessage)) {
-      return;
-    }
-
-    const fullPath = getNodeFullPath(fileTree, nodeId);
-    if (!fullPath) {
-      console.error("Could not find full path for node");
-      return;
-    }
-
-    try {
-      // Delete the file/folder
-      const response = await fetch(`${API_URL}/api/files`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          path: fullPath,
-          type: nodeType,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to delete item");
+      nodeId: string,
+      nodeName: string,
+      nodeType: 'file' | 'folder'
+    ) => {
+      const confirmMessage = `Are you sure you want to delete this ${nodeType}${
+        nodeType === 'folder' ? ' and all its contents' : ''
+      }?`;
+      if (!confirm(confirmMessage)) {
+        return;
       }
 
-      // Update metadata
-      const pathParts = fullPath.split('/');
-      const language = pathParts[0];
-      const section = pathParts[1];
-      const fileId = nodeName.replace('.json', '');
+      const fullPath = getNodeFullPath(fileTree, nodeId);
+      if (!fullPath) {
+        console.error('Could not find full path for node');
+        return;
+      }
 
-      // Get current metadata
-      const rootMetaPath = `${language}/${section}/_meta.json`;
-      const metaResponse = await fetch(`${API_URL}/api/files?path=${encodeURIComponent(rootMetaPath)}`);
+      try {
+        console.log('Deleting item from tree:', { nodeName, fullPath });
+        const response = await fetch(`${API_URL}/api/files`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            path: fullPath,
+            type: nodeType,
+          }),
+        });
 
-      if (metaResponse.ok) {
-        const rootMeta = await metaResponse.json() as RootMeta;
-
-        // Navigate through the path to find the right section
-        let currentSection = rootMeta;
-        for (let i = 2; i < pathParts.length - 1; i++) {
-          const part = pathParts[i];
-          
-          // Convert path to camelCase for section key
-          const sectionKey = part.replace(/-/g, ' ')
-            .split(' ')
-            .map((word, index) => {
-              const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
-              return index === 0 ? capitalized.toLowerCase() : capitalized;
-            })
-            .join('');
-
-          if (currentSection[sectionKey] && (currentSection[sectionKey] as MetaItem).items) {
-            currentSection = (currentSection[sectionKey] as MetaItem).items!;
-          }
+        if (!response.ok) {
+          throw new Error('Failed to delete item');
         }
 
-        // Remove the entry
-        if (nodeType === 'file' && currentSection[fileId]) {
-          delete currentSection[fileId];
+        // Update metadata
+        const pathParts = fullPath.split('/');
+        const language = pathParts[0];
+        const section = pathParts[1];
+        const fileId = nodeName.replace('.json', '');
+
+        // Get current metadata
+        const rootMetaPath = `${language}/${section}/_meta.json`;
+        const metaResponse = await fetch(
+          `${API_URL}/api/files?path=${encodeURIComponent(rootMetaPath)}`
+        );
+
+        if (metaResponse.ok) {
+          const rootMeta = (await metaResponse.json()) as RootMeta;
+
+          // Navigate through the path to find the right section
+          let currentSection = rootMeta;
+          for (let i = 2; i < pathParts.length - 1; i++) {
+            const part = pathParts[i];
+
+            // Convert path to camelCase for section key
+            const sectionKey = part
+              .replace(/-/g, ' ')
+              .split(' ')
+              .map((word, index) => {
+                const capitalized =
+                  word.charAt(0).toUpperCase() + word.slice(1);
+                return index === 0 ? capitalized.toLowerCase() : capitalized;
+              })
+              .join('');
+
+            // For deletion, we only need to delete the key itself,
+            // whether it's a file or folder
+            if (i === pathParts.length - 2) {
+              // We've reached the parent level where we need to delete
+              if (currentSection[sectionKey]) {
+                delete currentSection[sectionKey];
+              }
+              break;
+            } else if (
+              currentSection[sectionKey] &&
+              (currentSection[sectionKey] as MetaItem).items
+            ) {
+              currentSection = (currentSection[sectionKey] as MetaItem).items!;
+            }
+          }
+
+          // If it's a top-level item
+          if (pathParts.length <= 3) {
+            const key = fileId
+              .replace(/-/g, ' ')
+              .split(' ')
+              .map((word, index) => {
+                const capitalized =
+                  word.charAt(0).toUpperCase() + word.slice(1);
+                return index === 0 ? capitalized.toLowerCase() : capitalized;
+              })
+              .join('');
+
+            if (currentSection[key]) {
+              delete currentSection[key];
+            }
+          }
 
           // Save updated metadata
           await fetch(`${API_URL}/api/files`, {
@@ -574,19 +602,17 @@ export default function FileExplorer({ onFileSelect }: FileExplorerProps) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               path: rootMetaPath,
-              content: rootMeta
-            })
+              content: rootMeta,
+            }),
           });
         }
-      }
 
-      // Update the file tree state
-      const updatedTree = deleteItemFromTree(fileTree, nodeId);
-      setFileTree(updatedTree);
-    } catch (error) {
-      console.error("Error deleting item:", error);
-    }
-  };
+        const updatedTree = deleteItemFromTree(fileTree, nodeId);
+        setFileTree(updatedTree);
+      } catch (error) {
+        console.error('Error deleting item:', error);
+      }
+    };
 
   const deleteItemFromTree = (tree: FileNode[], nodeId: string): FileNode[] => {
     return tree.filter((node) => {
