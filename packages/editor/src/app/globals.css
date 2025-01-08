@@ -70,3 +70,11 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
